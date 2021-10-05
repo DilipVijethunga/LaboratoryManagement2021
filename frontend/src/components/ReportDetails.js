@@ -31,7 +31,7 @@ export default class ReportDetails extends Component {
 
     render() {
 
-        const {patientID,patientName,refDoctor,totalProtein,albumin,globulin,alGlRatio,bilirubin,aspartateTrans,alanineTrans,alkalinePos,GGT} = this.state.report;
+        const {_id, patientID,patientName,refDoctor,totalProtein,albumin,globulin,alGlRatio,bilirubin,aspartateTrans,alanineTrans,alkalinePos,GGT} = this.state.report;
 
         return (
             <div>
@@ -41,10 +41,10 @@ export default class ReportDetails extends Component {
                 <div className="page-content container">
                     <div className="page-header text-blue-d2">
                         <h1 className="page-title text-secondary-d1">
-                            Invoice
+                            Invoice ID:&nbsp;
                             <small className="page-info">
                                 <i className="fa fa-angle-double-right text-80"></i>
-                                ID: #111-222
+                                {_id}
                             </small>
                         </h1>
 
@@ -89,15 +89,13 @@ export default class ReportDetails extends Component {
                                     <div className="text-95 col-sm-6 align-self-start d-sm-flex justify-content-end">
                                         <hr className="d-sm-none" />
                                         <div className="text-grey-m2">
-                                            <div className="mt-1 mb-2 text-secondary-m1 text-600 text-125">
-                                                Invoice
-                                            </div>
+                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90"> </span> </div>
 
-                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90">Patient ID:</span> {patientID}</div>
+                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90">Patient ID: </span> {patientID}</div>
 
-                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90">Patient Name:</span> {patientName}</div>
+                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90">Patient Name: </span> {patientName}</div>
 
-                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90">Ref: Doctor:</span> <span className="badge badge-warning badge-pill px-25"></span>{refDoctor} </div>
+                                            <div className="my-2"><i className="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span className="text-600 text-90">Ref: Doctor: </span> <span className="badge badge-warning badge-pill px-25"></span>{refDoctor} </div>
                                         </div>
                                     </div>
 
@@ -105,118 +103,95 @@ export default class ReportDetails extends Component {
 
                                 <div className="mt-4">
                                     <div className="row text-600 text-white bgc-default-tp1 py-25">
-                                        <div className="d-none d-sm-block col-1">#</div>
-                                        <div className="col-9 col-sm-5">Description</div>
-                                        <div className="d-none d-sm-block col-4 col-sm-2">Qty</div>
-                                        <div className="d-none d-sm-block col-sm-2">Unit Price</div>
-                                        <div className="col-2">Amount</div>
+                                        {/* <div className="d-none d-sm-block col-1">#</div> */}
+                                        <div className="col-9 col-sm-5">Investigation</div>
+                                        <div className="d-none d-sm-block col-4 col-sm-2">Result</div>
+                                        <div className="d-none d-sm-block col-sm-2">Units</div>
+                                        <div className="col-3">Reference Range</div>
                                     </div>
 
                                     <div className="text-95 text-secondary-d3">
                                         <div className="row mb-2 mb-sm-0 py-25">
-                                            <div className="d-none d-sm-block col-1">1</div>
-                                            <div className="col-9 col-sm-5">Domain registration</div>
-                                            <div className="d-none d-sm-block col-2">2</div>
-                                            <div className="d-none d-sm-block col-2 text-95">$10</div>
-                                            <div className="col-2 text-secondary-d2">$20</div>
-                                        </div>
-
-                                        <div className="row mb-2 mb-sm-0 py-25 bgc-default-l4">
-                                            <div className="d-none d-sm-block col-1">2</div>
-                                            <div className="col-9 col-sm-5">Web hosting</div>
-                                            <div className="d-none d-sm-block col-2">1</div>
-                                            <div className="d-none d-sm-block col-2 text-95">$15</div>
-                                            <div className="col-2 text-secondary-d2">$15</div>
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Total Protein</div>
+                                            <div className="d-none d-sm-block col-2">{totalProtein}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">g/dL</div>
+                                            <div className="col-2 text-secondary-d2">6.4 - 8.2</div>
                                         </div>
 
                                         <div className="row mb-2 mb-sm-0 py-25">
-                                            <div className="d-none d-sm-block col-1">3</div>
-                                            <div className="col-9 col-sm-5">Software development</div>
-                                            <div className="d-none d-sm-block col-2">--</div>
-                                            <div className="d-none d-sm-block col-2 text-95">$1,000</div>
-                                            <div className="col-2 text-secondary-d2">$1,000</div>
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Albumin</div>
+                                            <div className="d-none d-sm-block col-2">{albumin}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">g/dL</div>
+                                            <div className="col-2 text-secondary-d2">3.4 - 5</div>
                                         </div>
 
-                                        <div className="row mb-2 mb-sm-0 py-25 bgc-default-l4">
-                                            <div className="d-none d-sm-block col-1">4</div>
-                                            <div className="col-9 col-sm-5">Consulting</div>
-                                            <div className="d-none d-sm-block col-2">1 Year</div>
-                                            <div className="d-none d-sm-block col-2 text-95">$500</div>
-                                            <div className="col-2 text-secondary-d2">$500</div>
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Globulin</div>
+                                            <div className="d-none d-sm-block col-2">{globulin}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">2.5 - 3.5</div>
+                                            <div className="col-2 text-secondary-d2">6.4 - 8.2</div>
                                         </div>
+
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Albumin/Globulin Ratio</div>
+                                            <div className="d-none d-sm-block col-2">{alGlRatio}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">g/dL</div>
+                                            <div className="col-2 text-secondary-d2"></div>
+                                        </div>
+
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Bilirubin- Total</div>
+                                            <div className="d-none d-sm-block col-2">{bilirubin}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">mg/dL</div>
+                                            <div className="col-2 text-secondary-d2">1.2</div>
+                                        </div>
+
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Aspartate Transaminase(AST/SGOT)</div>
+                                            <div className="d-none d-sm-block col-2">{aspartateTrans}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">U/L</div>
+                                            <div className="col-2 text-secondary-d2">15 - 37</div>
+                                        </div>
+
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Alanine Transaminase(ALT/SGPT)</div>
+                                            <div className="d-none d-sm-block col-2">{alanineTrans}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">U/L</div>
+                                            <div className="col-2 text-secondary-d2">14 - 59</div>
+                                        </div>
+
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Alkaline Phosphatase</div>
+                                            <div className="d-none d-sm-block col-2">{alkalinePos}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">U/L</div>
+                                            <div className="col-2 text-secondary-d2">46 - 116</div>
+                                        </div>
+
+                                        <div className="row mb-2 mb-sm-0 py-25">
+                                            {/* <div className="d-none d-sm-block col-1">1</div> */}
+                                            <div className="col-9 col-sm-5">Gamma Glutamyl Transferase(GGT)</div>
+                                            <div className="d-none d-sm-block col-2">{GGT}</div>
+                                            <div className="d-none d-sm-block col-2 text-95">IU/L</div>
+                                            <div className="col-2 text-secondary-d2">5 - 55</div>
+                                        </div>
+                                       
                                     </div>
 
                                     <div className="row border-b-2 brc-default-l2"></div>
 
 
 
-                                    <div className="table-responsive">
-                                        <table className="table table-striped table-borderless border-0 border-b-2 brc-default-l1">
-                                            <thead className="bg-none bgc-default-tp1">
-                                                <tr className="text-white">
-                                                    <th className="opacity-2">#</th>
-                                                    <th>Description</th>
-                                                    <th>Qty</th>
-                                                    <th>Unit Price</th>
-                                                    <th width="140">Amount</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody className="text-95 text-secondary-d3">
-                                                <tr></tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Domain registration</td>
-                                                    <td>2</td>
-                                                    <td className="text-95">$10</td>
-                                                    <td className="text-secondary-d2">$20</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-
-                                    <div className="row mt-3">
-                                        <div className="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
-                                            Extra note such as company or payment information...
-                                        </div>
-
-                                        <div className="col-12 col-sm-5 text-grey text-90 order-first order-sm-last">
-                                            <div className="row my-2">
-                                                <div className="col-7 text-right">
-                                                    SubTotal
-                                                </div>
-                                                <div className="col-5">
-                                                    <span className="text-120 text-secondary-d1">$2,250</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="row my-2">
-                                                <div className="col-7 text-right">
-                                                    Tax (10%)
-                                                </div>
-                                                <div className="col-5">
-                                                    <span className="text-110 text-secondary-d1">$225</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="row my-2 align-items-center bgc-primary-l3 p-2">
-                                                <div className="col-7 text-right">
-                                                    Total Amount
-                                                </div>
-                                                <div className="col-5">
-                                                    <span className="text-150 text-success-d3 opacity-2">$2,475</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <hr />
 
-                                    <div>
-                                        <span className="text-secondary-d1 text-105">Thank you for your business</span>
-                                        <a href="#" className="btn btn-info btn-bold px-4 float-right mt-3 mt-lg-0">Pay Now</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
