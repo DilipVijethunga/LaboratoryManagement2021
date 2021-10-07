@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class AddReport extends Component {
 
@@ -49,7 +50,28 @@ export default class AddReport extends Component {
             alkalinePos:alkalinePos,
             GGT:GGT
         }
-        console.log(data);
+        
+        axios.post("http://localhost:8000/reports/add", data).then((res) =>{
+            if(res.data.success){
+                this.setState(
+                    {
+                        patientID:"",
+                        patientName:"",
+                        refDoctor:"",
+                        totalProtein:"",
+                        albumin:"",
+                        globulin:"",
+                        alGlRatio:"",
+                        bilirubin:"",
+                        aspartateTrans:"",
+                        alanineTrans:"",
+                        alkalinePos:"",
+                        GGT:""
+                    }
+                )
+            }
+        })
+        
     }
 
     render() {
