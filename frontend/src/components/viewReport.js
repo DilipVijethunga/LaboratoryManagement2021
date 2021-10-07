@@ -61,8 +61,8 @@ componentDidMount(){
                             <td>{reports.patientName}</td>
                             <td>{reports.refDoctor}</td>
                             <td>
-                                <a className="btn btn-warning" href="/EditReport/">Edit</a>
-                                <a className="btn btn-Danger" href="/delete">Delete</a>
+                                <a className="btn btn-warning" href="/EditReport/">Edit</a>&nbsp;
+                                <a className="btn btn-danger" href="/delete">Delete</a>
                             </td>
                         </tr>
 

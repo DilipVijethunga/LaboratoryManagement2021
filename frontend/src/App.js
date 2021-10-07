@@ -5,6 +5,7 @@ import Header from './components/Header';
 import SideBar from './components/SideBar';
 import { BrowserRouter, Route } from 'react-router-dom';
 import ReportDetails from './components/ReportDetails';
+import AddReport from './components/AddReport';
 
 export default class App extends Component {
 
@@ -30,6 +31,7 @@ export default class App extends Component {
               </div>
               <div className="col-9 p-5">
               <Route path="/" exact component={viewReport} />
+              <Route path="/add" exact component={AddReport} />
               <Route path="/reports/get/:id" exact component={ReportDetails}></Route>
               </div>
             </div>
