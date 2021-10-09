@@ -6,6 +6,7 @@ import SideBar from './components/SideBar';
 import { BrowserRouter, Route } from 'react-router-dom';
 import ReportDetails from './components/ReportDetails';
 import AddReport from './components/AddReport';
+import EditReport from './components/EditReport';
 
 export default class App extends Component {
 
@@ -33,6 +34,7 @@ export default class App extends Component {
               <Route path="/" exact component={viewReport} />
               <Route path="/add" exact component={AddReport} />
               <Route path="/reports/get/:id" exact component={ReportDetails}></Route>
+              <Route path="/edit/:id" exact component={EditReport}></Route>
               </div>
             </div>
 

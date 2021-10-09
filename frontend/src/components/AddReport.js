@@ -80,9 +80,9 @@ export default class AddReport extends Component {
             <div className="container">
             <form>
                 <h2>Patient Details</h2>
-                <div class="form-group row p-2">
+                <div className="form-group row p-2">
                     <label for="inputEmail3" className="col-sm-3 col-form-label">Patient ID</label>
-                    <div class="col-sm-9">
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="patientID" 
@@ -92,9 +92,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
+                <div className="form-group row p-2">
                     <label for="inputEmail3" className="col-sm-3 col-form-label">Patient Name</label>
-                    <div class="col-sm-9">
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="patientName" 
@@ -104,9 +104,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
+                <div className="form-group row p-2">
                     <label for="inputEmail3" className="col-sm-3 col-form-label">Doctor Name</label>
-                    <div class="col-sm-9">
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="refDoctor" 
@@ -118,9 +118,9 @@ export default class AddReport extends Component {
                 </div>
 
                 <h2>Report Details</h2>
-                <div class="form-group row p-2">
+                <div className="form-group row p-2">
                     <label for="inputEmail3" className="col-sm-3 col-form-label">Total Protein</label>
-                    <div class="col-sm-9">
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="totalProtein" 
@@ -130,9 +130,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
+                <div className="form-group row p-2">
                     <label for="inputEmail3" className="col-sm-3 col-form-label">Albumin</label>
-                    <div class="col-sm-9">
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="albumin" 
@@ -143,9 +143,9 @@ export default class AddReport extends Component {
                     </div>
                 </div>
 
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Globulin</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Globulin</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="globulin" 
@@ -155,9 +155,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Albumin/Globulin Ratio</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Albumin/Globulin Ratio</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="alGlRatio" 
@@ -167,9 +167,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Bilirubin- Total</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Bilirubin- Total</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="bilirubin" 
@@ -179,9 +179,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Aspartate Transaminase(AST/SGOT)</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Aspartate Transaminase(AST/SGOT)</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="aspartateTrans" 
@@ -191,9 +191,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Alanine Transaminase(ALT/SGPT)</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Alanine Transaminase(ALT/SGPT)</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="alanineTrans" 
@@ -203,9 +203,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Alkaline Phosphatase</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Alkaline Phosphatase</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="alkalinePos" 
@@ -215,9 +215,9 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
-                <div class="form-group row p-2">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Gamma Glutamyl Transferase(GGT)</label>
-                    <div class="col-sm-9">
+                <div className="form-group row p-2">
+                    <label for="inputEmail3" className="col-sm-3 col-form-label">Gamma Glutamyl Transferase(GGT)</label>
+                    <div className="col-sm-9">
                         <input type="text" 
                         className="form-control " 
                         name="GGT" 
@@ -229,8 +229,8 @@ export default class AddReport extends Component {
                 </div>
                 
                 <br />
-                <div class="btn btn-primary position-relative start-50  badge">
-                    <button type="button" class="btn btn-primary p-2 " onClick={this.onSubmit}>Submit</button>
+                <div className="btn btn-primary position-relative start-50  badge">
+                    <button type="button" className="btn btn-primary p-2 " onClick={this.onSubmit}>Submit</button>
                 </div>
 
             </form>
