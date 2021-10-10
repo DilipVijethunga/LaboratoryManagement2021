@@ -265,7 +265,7 @@ export default class EditReport extends Component {
                 
                 <br />
                 <div className="btn btn-primary position-relative start-50  badge">
-                    <button type="button" className="btn btn-primary p-2 " onClick={this.onSubmit}>Submit</button>
+                    <button type="button" className="btn btn-primary p-2 " onClick={this.onSubmit}>Update</button>
                 </div>
 
             </form>
