@@ -38,7 +38,31 @@ export default class AddReport extends Component {
     })
   }
 
-  
+  //search function
+
+  filterData(reports,search){
+
+    const result = reports.filter((reports) =>
+      reports.patientName.includes(search)
+    )
+
+    this.setState({reports:result})
+
+  }
+
+  handleSearch = (e) => {
+    const search = e.currentTarget.value;
+
+    axios.get("http://localhost:8000/reports/view").then(res => {
+
+      if (res.data.success) {
+        
+        this.filterData(res.data.existingReport, search)
+      }
+
+    });
+
+  }
   
 
   render() {
