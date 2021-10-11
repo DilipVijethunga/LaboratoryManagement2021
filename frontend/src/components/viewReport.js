@@ -43,7 +43,9 @@ export default class AddReport extends Component {
   filterData(reports,search){
 
     const result = reports.filter((reports) =>
-      reports.patientName.includes(search)
+      reports.patientName.toLowerCase().includes(search) ||
+      reports.refDoctor.toLowerCase().includes(search) ||
+      reports.patientID.includes(search)
     )
 
     this.setState({reports:result})
