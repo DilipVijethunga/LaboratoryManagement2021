@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import ReportDetails from './components/ReportDetails';
 import AddReport from './components/AddReport';
 import EditReport from './components/EditReport';
+import AdminPanel from './components/AdminPanel'
 
 export default class App extends Component {
 
@@ -14,32 +15,20 @@ export default class App extends Component {
   render() {
     return (
 
+
       <BrowserRouter>
 
+        {/* navbar header */}
         <div>
-          <div>
-            {/* navbar header */}
-            <div>
-              <Header />
+          <Header />
 
-            </div>
+        </div>
 
-            {/* body */}
-
-            <div className="row">
-              <div className="col-3 p-5">
-                <SideBar />
-              </div>
-              <div className="col-9 p-5">
-              <Route path="/" exact component={viewReport} />
-              <Route path="/add" exact component={AddReport} />
-              <Route path="/reports/get/:id" exact component={ReportDetails}></Route>
-              <Route path="/edit/:id" exact component={EditReport}></Route>
-              </div>
-            </div>
-
-
-          </div>
+        <div>
+          <Route path="/admin" exact component={AdminPanel} />
+          <Route path="/admin/add" exact component={AdminPanel} />
+          <Route path="/admin/edit/:id" exact component={AdminPanel} />
+          <Route path="/admin/reports/get/:id" exact component={AdminPanel} />
         </div>
 
       </BrowserRouter>

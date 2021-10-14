@@ -100,12 +100,12 @@ export default class AddReport extends Component {
                 <th scope="row">{index + 1}</th>
                 <td>
 
-                  <a href={`/reports/get/${reports._id}`}>{reports.patientID}</a>
+                  <a href={`/admin/reports/get/${reports._id}`}>{reports.patientID}</a>
                 </td>
                 <td>{reports.patientName}</td>
                 <td>{reports.refDoctor}</td>
                 <td>
-                  <a className="btn btn-warning" href={`/edit/${reports._id}`}>Edit</a>&nbsp;
+                  <a className="btn btn-warning" href={`/admin/edit/${reports._id}`}>Edit</a>&nbsp;
                   <a className="btn btn-danger" href="#" onClick={() => this.onDelete(reports._id)}>Delete</a>
                 </td>
               </tr>
