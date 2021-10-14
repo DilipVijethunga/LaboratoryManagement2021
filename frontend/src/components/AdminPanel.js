@@ -7,39 +7,44 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import ReportDetails from './ReportDetails';
 import AddReport from './AddReport';
 import EditReport from './EditReport';
+import Header from './Header';
 
 export default class App extends Component {
 
 
-  render() {
-    return (
+    render() {
+        return (
 
-      <BrowserRouter>
+            <BrowserRouter>
 
-        <div>
-          <div>
-            
-            {/* body */}
+                <div>
+                    <div>
+                        <div>
+                            <Header />
 
-            <div className="row">
-              <div className="col-3 p-5">
-                <SideBar />
-              </div>
-              <div className="col-9 p-5">
-              <Route path="/admin" exact component={viewReport} />
-              <Route path="/admin/add" exact component={AddReport} />
-              <Route path="/admin/reports/get/:id" exact component={ReportDetails}></Route>
-              <Route path="/admin/edit/:id" exact component={EditReport}></Route>
-              </div>
-            </div>
+                        </div>
 
+                        {/* body */}
 
-          </div>
-        </div>
-
-      </BrowserRouter>
+                        <div className="row">
+                            <div className="col-3 p-5">
+                                <SideBar />
+                            </div>
+                            <div className="col-9 p-5">
+                                <Route path="/admin" exact component={viewReport} />
+                                <Route path="/admin/add" exact component={AddReport} />
+                                <Route path="/admin/reports/get/:id" exact component={ReportDetails}></Route>
+                                <Route path="/admin/edit/:id" exact component={EditReport}></Route>
+                            </div>
+                        </div>
 
 
-    )
-  }
+                    </div>
+                </div>
+
+            </BrowserRouter>
+
+
+        )
+    }
 }

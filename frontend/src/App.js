@@ -19,10 +19,7 @@ export default class App extends Component {
       <BrowserRouter>
 
         {/* navbar header */}
-        <div>
-          <Header />
-
-        </div>
+        
 
         <div>
           <Route path="/admin" exact component={AdminPanel} />
