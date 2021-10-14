@@ -44,15 +44,14 @@ export default class AddReport extends Component {
 
     const result = reports.filter((reports) =>
       reports.patientName.toLowerCase().includes(search) ||
-      reports.refDoctor.toLowerCase().includes(search) ||
-      reports.patientID.includes(search)
+      reports.refDoctor.toLowerCase().includes(search)
     )
 
-    this.setState({reports:result})
-
+    this.setState({reports: result})
   }
 
   handleSearch = (e) => {
+    
     const search = e.currentTarget.value;
 
     axios.get("http://localhost:8000/reports/view").then(res => {

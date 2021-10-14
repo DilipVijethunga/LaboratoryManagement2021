@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 //import axios from 'axios';
-import viewReport from './components/viewReport';
-import Header from './components/Header';
-import SideBar from './components/SideBar';
+// import viewReport from './components/viewReport';
+// import Header from './components/Header';
+// import SideBar from './components/SideBar';
 import { BrowserRouter, Route } from 'react-router-dom';
-import ReportDetails from './components/ReportDetails';
-import AddReport from './components/AddReport';
-import EditReport from './components/EditReport';
+// import ReportDetails from './components/ReportDetails';
+// import AddReport from './components/AddReport';
+// import EditReport from './components/EditReport';
 import AdminPanel from './components/AdminPanel'
+import Patient from './components/patient/Patient';
+import PatientReport from './components/patient/PatientReport';
 
 export default class App extends Component {
 
@@ -28,9 +30,15 @@ export default class App extends Component {
           <Route path="/admin/reports/get/:id" exact component={AdminPanel} />
         </div>
 
+        <div>
+          <Route path="/patient" exact component={Patient} />
+          <Route path="/patient/reports/get/:id" exact component={PatientReport} />
+        </div>
+
       </BrowserRouter>
 
 
     )
   }
 }
+
