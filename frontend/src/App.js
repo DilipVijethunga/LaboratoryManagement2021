@@ -10,6 +10,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import AdminPanel from './components/AdminPanel'
 import Patient from './components/patient/Patient';
 import PatientReport from './components/patient/PatientReport';
+import Test from './components/patient/Test';
 
 export default class App extends Component {
 
@@ -33,6 +34,7 @@ export default class App extends Component {
         <div>
           <Route path="/patient" exact component={Patient} />
           <Route path="/patient/reports/get/:id" exact component={PatientReport} />
+          <Route path="/test" exact component={Test} />
         </div>
 
       </BrowserRouter>

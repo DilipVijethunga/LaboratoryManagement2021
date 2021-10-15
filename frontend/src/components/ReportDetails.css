@@ -5,6 +5,10 @@ body{
 .text-secondary-d1 {
     color: #728299!important;
 }
+
+#divToPrint{
+    width: 650px;
+}
 .page-header {
     margin: 0 0 1rem;
     padding-bottom: 1rem;
