@@ -18,10 +18,11 @@ export default class AddReport extends Component {
             aspartateTrans:"",
             alanineTrans:"",
             alkalinePos:"",
-            GGT:""
+            GGT:"",
         }
     }
 
+    //search input detection
     handleInputChange = (e) =>{
         const {name,value} = e.target;
 
@@ -92,6 +93,7 @@ export default class AddReport extends Component {
                         />
                     </div>
                 </div>
+                
                 <div className="form-group row p-2">
                     <label for="inputEmail3" className="col-sm-3 col-form-label">Patient Name</label>
                     <div className="col-sm-9">

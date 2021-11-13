@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import './ReportDetails.css'
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 export default class ReportDetails extends Component {
 
@@ -11,6 +13,18 @@ export default class ReportDetails extends Component {
 
             report: {}
         };
+    }
+
+    printDocument() {
+        const input = document.getElementById('divToPrint');
+        html2canvas(input)
+            .then((canvas) => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF();
+                pdf.addImage(imgData, 'JPEG', 0, 0);
+                pdf.output('dataurlnewwindow');
+                pdf.save("download.pdf");
+            });
     }
 
     componentDidMount() {
@@ -49,20 +63,17 @@ export default class ReportDetails extends Component {
                         </h1>
 
                         <div className="page-tools">
-                            <div className="action-buttons">
+                            <div className="action-buttons" onClick={this.printDocument}>
                                 <a className="btn bg-white btn-light mx-1px text-95" href="#" data-title="Print">
                                     <i className="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
                                     Print
                                 </a>
-                                <a className="btn bg-white btn-light mx-1px text-95" href="#" data-title="PDF">
-                                    <i className="mr-1 fa fa-file-pdf-o text-danger-m1 text-120 w-2"></i>
-                                    Export
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div className="container px-0">
+                    <div className="container px-0" id="divToPrint">
                         <div className="row mt-4">
                             <div className="col-12 col-lg-10 offset-lg-1">
                                 

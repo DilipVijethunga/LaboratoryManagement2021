@@ -30,12 +30,6 @@ export default class Patient extends Component {
         });
     }
 
-    onDelete = (id) => {
-        axios.delete(`http://localhost:8000/reports/delete/${id}`).then((res) => {
-            alert("Deleted Successfully!");
-            this.retrieveReports();
-        })
-    }
 
     //search function
 
@@ -94,7 +88,7 @@ export default class Patient extends Component {
                                     <th scope="col">Patient ID</th>
                                     <th scope="col">Patient Name</th>
                                     <th scope="col">Doctor Name</th>
-                                    <th scope="col">Actions</th>
+                                    
                                 </tr>
                             </thead>
 
@@ -110,10 +104,7 @@ export default class Patient extends Component {
                                         </td>
                                         <td>{reports.patientName}</td>
                                         <td>{reports.refDoctor}</td>
-                                        <td>
-                                            <a className="btn btn-warning" href={`/admin/edit/${reports._id}`}>Edit</a>&nbsp;
-                                            <a className="btn btn-danger" href="#" onClick={() => this.onDelete(reports._id)}>Delete</a>
-                                        </td>
+                                        
                                     </tr>
 
 

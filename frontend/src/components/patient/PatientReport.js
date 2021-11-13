@@ -80,7 +80,7 @@ export default class ReportDetails extends Component {
 
                     <div className="container px-0" id="divToPrint" {...css({
                         backgroundColor: '#f5f5f5',
-                        width: '210mm',
+                        
                         minHeight: '297mm',
                         marginLeft: 'auto',
                         marginRight: 'auto'
